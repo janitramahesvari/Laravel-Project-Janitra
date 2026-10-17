@@ -16,21 +16,18 @@
                     <th class="px-6 py-3">No</th>
                     <th class="px-6 py-3">NIS</th>
                     <th class="px-6 py-3">Nama</th>
-                    <th class="px-6 py-3">Class</th>
-                    <th class="px-6 py-3">Action</th>
+                    <th class="px-6 py-3">Classroom</th>
+                    <th class="px-6 py-3">Addres</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($students as $student)
                     <tr class="border-b dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700">
                         <td class="px-6 py-4">{{ $loop->iteration }}</td>
-                        <td class="px-6 py-4">{{ $student['nis'] }}</td>
-                        <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">{{ $student['name'] }}</td>
-                        <td class="px-6 py-4">{{ $student['class'] }}</td>
-                        <td class="px-6 py-4">
-                            <a href="#" class="font-medium text-blue-600 hover:underline dark:text-blue-500">Edit</a>
-                            <a href="#" class="font-medium text-red-600 hover:underline dark:text-red-500 ml-3">Hapus</a>
-                        </td>
+                        <td class="px-6 py-4">{{ $student->nis }}</td>
+                        <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">{{ $student->name }}</td>
+                        <td class="px-6 py-4">{{ $student->classroom}}</td>
+                       <td class="px-6 py-4">{{ $student->addres }}</td>
                     </tr>
                 @endforeach
             </tbody>

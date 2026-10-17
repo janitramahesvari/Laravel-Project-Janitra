@@ -1,9 +1,10 @@
-php artisan make:controller DashboardController<?php
+<?php
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\ClassroomController;
 
 Route::get('/home', function () {
     return view('home');
@@ -17,5 +18,8 @@ Route::get('/admin/about', [AboutController::class, 'index'])
 
 Route::get('/admin/student', [StudentController::class, 'index'])
     ->name('admin.student');
+
+Route::get('/admin/classroom', [ClassroomController::class, 'index'])
+    ->name('admin.classroom');
 
 // require __DIR__.'/dashboardurl.php';
